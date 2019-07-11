@@ -1,5 +1,6 @@
 from room import Room
 from player import Player
+
 # from item import Item
 
 
@@ -58,7 +59,7 @@ print(room_name)
 # * Waits for user input and decides what to do.
 move = input('Where are you going? n, s, e, or w? ')
 
-
+# * Ask for players name
 name = input("Please input your name: ")
 #
 # If the user enters a cardinal direction, attempt to move to the room there.
