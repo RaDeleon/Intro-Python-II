@@ -1,4 +1,7 @@
 from room import Room
+from player import Player
+# from item import Item
+
 
 # Declare all the rooms
 
@@ -33,19 +36,83 @@ room['narrow'].w_to = room['foyer']
 room['narrow'].n_to = room['treasure']
 room['treasure'].s_to = room['narrow']
 
+
+current_room = 'outside'
 #
 # Main
 #
 
 # Make a new player object that is currently in the 'outside' room.
+player = Player(room['outside'])
 
 # Write a loop that:
-#
+
+
 # * Prints the current room name
+print(room_name)
+
+
 # * Prints the current description (the textwrap module might be useful here).
+ print(room_desc)
+
 # * Waits for user input and decides what to do.
+move = input('Where are you going? n, s, e, or w? ')
+
+
+name = input("Please input your name: ")
 #
 # If the user enters a cardinal direction, attempt to move to the room there.
 # Print an error message if the movement isn't allowed.
-#
+
+
+while True:
+    player = Player(name, current_room)
+    playerRoom = Room(room[current_room].name , room[current_room].description)
+    print(playerRoom)
+    print(player)
+
+    direction = input("Please input a direction n/s/e/w: ")
+
 # If the user enters "q", quit the game.
+    if direction == "q":
+        break
+    elif current_room == "outside":
+        if direction == "n":
+            current_room = "foyer"
+        else:
+            print("That movement is not allowed")
+            continue
+    elif current_room == "foyer":
+        if direction == "s":
+            current_room = "outside"
+        elif direction == "n":
+            current_room == "overlook"
+        elif direction == "e":
+            direction == "narrow"
+        else:
+            print("That movement is not allowed")
+            continue
+    elif current_room == "overlook":
+        if direction == "s":
+            current_room = "foyer"
+        else:
+            print("That movement is not allowed")
+            continue
+    elif current_room == "narrow":
+        if direction == "w":
+            current_room = "foyer"
+        elif direction == "n":
+            current_room = "treasure"
+        else:
+            print("That movement is not allowed")
+            continue
+    elif current_room == "treasure":
+        if direction == "s":
+            current_room = "narrow"
+        else:
+            print("That movement is not allowed")
+            continue
+
+print("Thank you for playing. Please Enter 25c to continue!!")
+    
+
