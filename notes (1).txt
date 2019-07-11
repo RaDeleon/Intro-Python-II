@@ -6,10 +6,3 @@ TODO
 * pick up items?
 * inventory?
 * 
-
-
-Add Later
-* Add stats to items
-* RPG like stats on player 
-* set items in rooms or randomize item drop rates
-* 
