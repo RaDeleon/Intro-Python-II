@@ -1,0 +1,8 @@
+TODO
+* Add base room class
+* Create basic game loop
+* connect the rooms
+* add item class
+* pick up items?
+* inventory?
+* 

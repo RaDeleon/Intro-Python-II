@@ -1,4 +1,8 @@
+# Angelo Deleon CS19
+
+
 # Intro to Python II
+
 
 Up to this point, you've gotten your feet wet by working on a bunch of small Python programs. In this module, we're going to continue to solidify your Python chops by implementing a full-featured project according to a provided specification.
 
@@ -197,3 +201,5 @@ In arbitrary order:
   prevent the attack from succeeding unless the user possesses a `sword` item.
 
 * Come up with more stretch goals! The sky's the limit!
+
+
